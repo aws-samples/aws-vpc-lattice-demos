@@ -6,8 +6,9 @@ sudo amazon-linux-extras install postgresql10 -y
 
 #
 # Export the environmane variables in the 'exports' file
-# Change the value for the variables DBROLE, DBPASSWORD and DBHOST per your environment. Keeps other variables the same.
-# 
+# Change the value for the variables DBROLE, D and DBHOST per your environment. Keeps other variables the same.
+# When setting the DBPASSWORD, set it like this:   DBPASSWORD="'foobar'"
+#
 source exports
 
 #
@@ -25,5 +26,5 @@ source exports
 # Modify the path names of the CSV files you are using for the import
 #
 psql --host=localhost --user=sarathy --dbname=amazon
-\copy analytics.userproductsummary from '/Users/..../postgres-setup/postgres-data-summary-csv' WITH DELIMITER ',' CSV HEADER;
-\copy analytics.popularity_bucket_permanent from '/Users/..../postgres-setup/postgres-data-popular-csv' WITH DELIMITER ',' CSV HEADER;
+\copy analytics.userproductsummary from '$ROOT_DIR/postgres-setup/postgres-data-summary-csv' WITH DELIMITER ',' CSV HEADER;
+\copy analytics.popularity_bucket_permanent from '$ROOT_DIR/postgres-setup/postgres-data-popular-csv' WITH DELIMITER ',' CSV HEADER;

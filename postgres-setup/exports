@@ -1,7 +1,7 @@
-export DBHOST=amazon-cluster.cluster-c9nqfi4rccuv.us-east-1.rds.amazonaws.com 
+export DBHOST=
+export DBROLE=
+export DBPASSWORD=
 export DBPORT=5432
 export DBMASTERUSER=postgres
-export DBROLE=sarathy
-export DBPASSWORD="'Viji@AWS2022'"
 export DBNAME=amazon
 export DBSCHEMA=analytics
