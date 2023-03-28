@@ -4,12 +4,9 @@ kind: HTTPRoute
 metadata:
   name: datastore
   namespace: apps
-  annotations:
-    external-dns.alpha.kubernetes.io/controller: dns-controller
-    external-dns.alpha.kubernetes.io/hostname: datastore2.lattice.sarathy.io
 spec:
   hostnames:
-  - datastore2.lattice.sarathy.io
+  - datastore.lattice.sarathy.io
   parentRefs:
   - name: eks-lattice-network
     sectionName: http 

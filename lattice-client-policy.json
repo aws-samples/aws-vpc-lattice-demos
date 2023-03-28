@@ -4,7 +4,7 @@
       {
          "Effect":"Allow",
          "Action":"vpc-lattice-svcs:Invoke",
-         "Resource":"arn:aws:vpc-lattice:us-west-2:937351930975:service/svc-039bd9a59fdefd2dc/*"
+         "Resource":"arn:aws:vpc-lattice:us-west-2:937351930975:service/svc-005c0682b86fdb1f3/*"
       }
    ]
 }
