@@ -7,7 +7,7 @@
                "AWS": "arn:aws:iam::937351930975:role/aws-sigv4-client"
            },
            "Action": "vpc-lattice-svcs:Invoke",
-           "Resource": "arn:aws:vpc-lattice:us-west-2:937351930975:service/svc-039bd9a59fdefd2dc/*",
+           "Resource": "arn:aws:vpc-lattice:us-west-2:937351930975:service/svc-005c0682b86fdb1f3/*",
            "Condition": {
                "StringEquals": {
                    "vpc-lattice-svcs:SourceVpc": "vpc-07729bd8877f2ed9a"
