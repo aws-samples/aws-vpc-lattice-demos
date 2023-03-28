@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: aws-sigv4-client
+  namespace: apps
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::937351930975:role/aws-sigv4-client
