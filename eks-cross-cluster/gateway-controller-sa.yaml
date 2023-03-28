@@ -1,0 +1,8 @@
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: gateway-api-controller
+  namespace: system
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::937351930975:role/LatticeControllerRole
