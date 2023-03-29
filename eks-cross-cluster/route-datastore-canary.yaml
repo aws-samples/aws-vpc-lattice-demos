@@ -6,7 +6,7 @@ metadata:
   namespace: apps
 spec:
   hostnames:
-  - datastore.lattice.sarathy.io
+  - datastore.lattice.io
   parentRefs:
   - name: eks-lattice-network
     sectionName: http 
