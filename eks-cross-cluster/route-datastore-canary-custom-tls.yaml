@@ -6,10 +6,10 @@ metadata:
   namespace: apps
 spec:
   hostnames:
-  - datastore.lattice.sarathy.io
+  - datastore.sarathy.io
   parentRefs:
   - name: eks-lattice-network
-    sectionName: http 
+    sectionName: tls-with-custom-domain
   rules:  
   - backendRefs:  
     - name: datastore-v1-svc

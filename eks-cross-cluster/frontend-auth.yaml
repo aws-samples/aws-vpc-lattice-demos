@@ -5,7 +5,7 @@ metadata:
   name: frontend-auth
   namespace: apps
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: frontend
@@ -15,11 +15,11 @@ spec:
         app: frontend
       annotations:
         sidecar.aws.signing-proxy/inject: "true"
-        sidecar.aws.signing-proxy/host: "datastore.lattice.sarathy.io"
+        sidecar.aws.signing-proxy/host: "datastore.sarathy.io"
         sidecar.aws.signing-proxy/name: "vpc-lattice-svcs"
         sidecar.aws.signing-proxy/region: "us-west-2"
-        sidecar.aws.signing-proxy/unsigned-payload: "true"        
-        sidecar.aws.signing-proxy/scheme: "http"        
+        #sidecar.aws.signing-proxy/unsigned-payload: "true"        
+        sidecar.aws.signing-proxy/scheme: "HTTPS"        
     spec: 
       serviceAccountName: aws-sigv4-client
       containers:          

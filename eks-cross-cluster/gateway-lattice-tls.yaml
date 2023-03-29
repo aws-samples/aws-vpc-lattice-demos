@@ -1,0 +1,38 @@
+---
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: GatewayClass
+metadata:
+  name: amazon-vpc-lattice
+spec:
+  controllerName: application-networking.k8s.aws/gateway-api-controller
+
+---  
+apiVersion: gateway.networking.k8s.io/v1beta1
+kind: Gateway
+metadata:
+  name: eks-lattice-network
+spec:
+  gatewayClassName: amazon-vpc-lattice
+  listeners:
+    #
+    # HTTPS listener using default domain name provided by Lattice.
+    # VPC Lattice will provision and manage a TLS certificate that is associated with the VPC Lattice generated Fully Qualified Domain Name (FQDN).
+    #
+  - name: tls-with-default-domain
+    protocol: HTTPS
+    port: 443
+    allowedRoutes:
+      namespaces:
+        from: All        
+    #
+    # HTTPS listener using a custom domain name provided by user
+    # User must provision a certificate associated with the custom domain name. 
+    # Certificate should be sourced from ACM
+    #
+  - name: tls-with-custom-domain
+    protocol: HTTPS
+    port: 443
+    tls:
+      mode: Terminate
+      options:
+        application-networking.k8s.aws/certificate-arn: arn:aws:acm:us-west-2:937351930975:certificate/82ad9bd3-bfeb-4c62-806e-275bba110280    
