@@ -15,6 +15,10 @@ spec:
         app: frontend
       annotations:
         sidecar.aws.signing-proxy/inject: "true"
+        #
+        # Custom domain name of the destination service
+        # If not using cusotom domain name, this should be the VPC Lattice generated FQDN for the destination service
+        #
         sidecar.aws.signing-proxy/host: "datastore.sarathy.io"
         sidecar.aws.signing-proxy/name: "vpc-lattice-svcs"
         sidecar.aws.signing-proxy/region: "us-west-2"
