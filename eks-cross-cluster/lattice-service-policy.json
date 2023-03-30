@@ -4,13 +4,13 @@
        {
            "Effect": "Allow",
            "Principal": {
-               "AWS": "arn:aws:iam::937351930975:role/aws-sigv4-client"
+               "AWS": "arn:aws:iam::615847537300:role/aws-sigv4-client"
            },
            "Action": "vpc-lattice-svcs:Invoke",
-           "Resource": "arn:aws:vpc-lattice:us-west-2:937351930975:service/svc-005c0682b86fdb1f3/*",
+           "Resource": "arn:aws:vpc-lattice:us-west-2:615847537300:service/svc-0891088e6cc27c501/*",
            "Condition": {
                "StringEquals": {
-                   "vpc-lattice-svcs:SourceVpc": "vpc-07729bd8877f2ed9a"
+                   "vpc-lattice-svcs:SourceVpc": "vpc-027baaaf7156c6075"
                }
            }
        }
