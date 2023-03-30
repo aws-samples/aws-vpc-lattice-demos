@@ -14,7 +14,7 @@ metadata:
 spec:
   ingressClassName: awslb-store
   rules:
-    - host: frontend-eks.lattice.sarathy.io
+    - host: frontend-eks.lattice.io
       http:
         paths:
           - path: /popular

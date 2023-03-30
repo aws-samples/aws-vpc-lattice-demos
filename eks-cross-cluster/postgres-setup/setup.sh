@@ -25,6 +25,6 @@ source exports
 # Then, run the '\copy' commands from within the Postgres shell
 # Modify the path names of the CSV files you are using for the import
 #
-psql --host=localhost --user=sarathy --dbname=amazon
+psql --host=$DBHOST --user=$DBROLE --dbname=$DBNAME
 \copy analytics.userproductsummary from '$ROOT_DIR/postgres-setup/postgres-data-summary-csv' WITH DELIMITER ',' CSV HEADER;
 \copy analytics.popularity_bucket_permanent from '$ROOT_DIR/postgres-setup/postgres-data-popular-csv' WITH DELIMITER ',' CSV HEADER;

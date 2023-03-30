@@ -20,7 +20,7 @@ spec:
           imagePullPolicy: Always   
           env:
             - name: DATASTORE_SERVICE_URL
-              value: datastore.lattice.sarathy.io
+              value: datastore.lattice.io
           ports:
             - name: http
               containerPort: 3000
