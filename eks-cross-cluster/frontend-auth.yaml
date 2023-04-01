@@ -20,13 +20,13 @@ spec:
         # If not using cusotom domain name, this should be the VPC Lattice generated FQDN for the destination service
         #
         sidecar.aws.signing-proxy/host: "datastore.lattice.io"
-        sidecar.aws.signing-proxy/name: "vpc-lattice-svcs"
-        sidecar.aws.signing-proxy/region: "us-west-2"
-        sidecar.aws.signing-proxy/unsigned-payload: "true"    
         #
         # If you have enabled SSL/TLS for the destination Lattice service, you must use HTTPS here. Othersie, use HTTP
         #
-        sidecar.aws.signing-proxy/upstream-url-scheme: "HTTPS"     
+        sidecar.aws.signing-proxy/upstream-url-scheme: "HTTPS"           
+        sidecar.aws.signing-proxy/name: "vpc-lattice-svcs"
+        sidecar.aws.signing-proxy/region: "us-west-2"
+        sidecar.aws.signing-proxy/unsigned-payload: "true"      
     spec: 
       serviceAccountName: aws-sigv4-client
       containers:          
