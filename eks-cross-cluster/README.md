@@ -4,6 +4,9 @@ Amazon VPC Lattice is a fully-managed application networking service built direc
 
 This repository is a companion to this [blog](https://aws.amazon.com/blogs/containers/application-networking-with-amazon-vpc-lattice-and-amazon-eks/) which demonstrates a use case where a service running in an EKS cluster in a VPC is accessed, using Amazon VPC Lattice, from a service in another cluster in a different VPC, along with support for custom domain names for services. 
 
+### Solution architecture
+<img class="wp-image-1960 size-full" src="images/solution-architecture.png" alt="Solution architecture"/>
+
 ## Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
