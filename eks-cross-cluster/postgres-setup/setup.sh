@@ -6,7 +6,7 @@ sudo amazon-linux-extras install postgresql10 -y
 
 #
 # Export the environmane variables in the 'exports' file
-# Change the value for the variables DBROLE, D and DBHOST per your environment. Keeps other variables the same.
+# Change the value for the variables DBROLE, DBHOST, and DBPASSWORD per your environment. Keeps other variables the same.
 # When setting the DBPASSWORD, set it like this:   DBPASSWORD="'foobar'"
 #
 source exports
