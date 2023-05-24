@@ -19,7 +19,7 @@ spec:
         # Custom domain name of the destination service
         # If not using cusotom domain name, this should be the VPC Lattice generated FQDN for the destination service
         #
-        sidecar.aws.signing-proxy/host: "datastore.lattice.io"
+        sidecar.aws.signing-proxy/host: "datastore-lambda.sarathy.io"
         #
         # If you have enabled SSL/TLS for the destination Lattice service, you must use HTTPS here. Othersie, use HTTP
         #
@@ -64,7 +64,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: frontend-auth-svc
+  name: frontend-svc
   namespace: apps
 spec:
   type: ClusterIP  
