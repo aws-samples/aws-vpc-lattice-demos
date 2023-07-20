@@ -10,6 +10,7 @@ spec:
   parentRefs:
   - name: eks-lattice-network
     sectionName: http 
+    namespace: default
   rules:  
   - backendRefs:  
     - name: datastore-v1-svc

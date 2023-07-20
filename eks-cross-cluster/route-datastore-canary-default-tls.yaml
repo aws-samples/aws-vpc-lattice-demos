@@ -8,6 +8,7 @@ spec:
   parentRefs:
   - name: eks-lattice-network
     sectionName: tls-with-default-domain 
+    namespace: default
   rules:  
   - backendRefs:  
     - name: datastore-v1-svc
