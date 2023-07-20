@@ -1,1 +1,18 @@
-{"Version":"2012-10-17","Statement":[{"Effect":"Allow","Principal":{"AWS":"arn:aws:iam::615847537300:role/aws-sigv4-client"},"Action":"vpc-lattice-svcs:Invoke","Resource":"arn:aws:vpc-lattice:us-west-2:615847537300:service/svc-0891088e6cc27c501/*","Condition":{"StringEquals":{"vpc-lattice-svcs:SourceVpc":"vpc-027baaaf7156c6075"}}}]}
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::615847537300:role/aws-sigv4-client"
+            },
+            "Action": "vpc-lattice-svcs:Invoke",
+            "Resource": "arn:aws:vpc-lattice:us-west-2:615847537300:service/svc-0891088e6cc27c501/*",
+            "Condition": {
+                "StringEquals": {
+                    "vpc-lattice-svcs:SourceVpc": "vpc-027baaaf7156c6075"
+                }
+            }
+        }
+    ]
+}
