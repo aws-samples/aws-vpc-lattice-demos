@@ -14,7 +14,7 @@ spec:
   - backendRefs:  
     - name: datastore-v1-svc
       kind: Service
-      port: 3000
+      port: 80
       namespace: apps
     matches:
     - path:
@@ -23,12 +23,12 @@ spec:
   - backendRefs:  
     - name: datastore-v1-svc
       kind: Service
-      port: 3000
+      port: 80
       namespace: apps
       weight: 50
     - name: datastore-v2-svc
       kind: Service
-      port: 3000
+      port: 80
       namespace: apps      
       weight: 50
     matches:
